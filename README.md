@@ -4,7 +4,7 @@
 
 In our app, there are 2 deep learning models and 1 machine learning model. Each model will be explained in each folder.
 
-1. Our Object Detection model trained with a pre-trained model [SSD MobileNet V2 with FPN-Lite Feature Extractor 640x640](https://tfhub.dev/tensorflow/ssd_mobilenet_v2/fpnlite_640x640/1), shared box predictor and focal loss, trained on [COCO 2017](https://cocodataset.org/#home) dataset with training images scaled to 640x640. We set 40000 steps 64 batch on 7400+ images from 36 food classes.
+1. Our Object Detection model trained with a pre-trained model [SSD MobileNet V2 with FPN-Lite Feature Extractor 640x640](https://tfhub.dev/tensorflow/ssd_mobilenet_v2/fpnlite_640x640/1), shared box predictor and focal loss, trained on [COCO 2017](https://cocodataset.org/#home) dataset with training images scaled to 640x640. Then we Fine tuning with own and kaggle dataset, we set 40000 steps 64 batch on 7400+ images from 36 food classes.
 
 2. Yoga Pose Detection we will use the [MoveNet Lightning](https://tfhub.dev/google/movenet/multipose/lightning/1) model, extract the keypoints and calculate the similarity between the user and the yoga image with [Euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance) on 8 different angles.
 
